@@ -25,8 +25,20 @@ The following parameters were identified via Simulink Parameter Estimation. Note
 | **Gear Ratio** | $K_g$ | 20.45 (900/44) | - |
 | **Encoder Resolution**| $PPR$ | 11 | pulses/channel/rev |
 
+
 ## 3. Critical Observations
 - **Input Voltage:** The model must be simulated using **13.85V** as the rail voltage for accuracy.
 - **Driver used:** The MDD3A driver is highly linear. Unlike the L298N, there is no need to subtract a 2V drop in the Simulink voltage conversion block.
 - **Speed Correction:** The actual no-load speed was measured to be significantly different from the advertised 280 RPM.
+
+## 4. Parameter Estimation Results 
+![Parameter Estimation Results](parameter_estimation.png)
+
+
+## 5. PID Controller Performance (Closed Loop)
+A PID controller was designed in Simulink using the identified parameters and implemented on the ESP32. The plot below shows the tracking performance for a [Insert your setpoint, e.g., 150 RPM] step input.
+
+![PID Controller Response](pid_response.png)
+
+
 
