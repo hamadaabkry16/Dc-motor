@@ -36,7 +36,7 @@ The following parameters were identified via Simulink Parameter Estimation. Note
 
 
 ## 5. PID Controller Performance (Closed Loop)
-A PID controller was designed in Simulink using the identified parameters and implemented on the ESP32. The plot below shows the tracking performance for a [Insert your setpoint, e.g., 150 RPM] step input.
+A PID controller was designed in Simulink using the identified parameters and implemented on the ESP32. The plot below shows the tracking performance for different speeds.
 
 ![PID Controller Response](pid_response.png)
 
